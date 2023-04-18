@@ -1,0 +1,43 @@
+{
+  "learnhttp": {
+    "content": "Olá Mundo!"
+  },
+  "journals": [
+    {
+      "id": "4b27b3a0-dd62-11ed-977e-0d7859dbeacf",
+      "content": "Teste",
+      "created_at": "2023-04-07 20:56:14.656356",
+      "updated_at": "2023-04-07 20:56:14.656356"
+    },
+    {
+      "id": "7cf14c50-dd64-11ed-ad72-cb881fdbad77",
+      "content": "Teste2",
+      "created_at": "2023-04-16 21:11:34.892930",
+      "updated_at": "2023-04-16 21:11:34.892930"
+    },
+    {
+      "id": "987b82a0-dd65-11ed-9474-6350598b1714",
+      "content": "Refresh",
+      "created_at": "2023-04-08 21:19:48.695852",
+      "updated_at": "2023-04-08 21:19:48.695852"
+    },
+    {
+      "id": "bb267ad0-dd65-11ed-9e84-7b2e8ab700fe",
+      "content": "teste",
+      "created_at": "2023-04-10 21:20:45.581844",
+      "updated_at": "2023-04-10 21:20:45.581844"
+    },
+    {
+      "id": "fd8fdbb0-ddeb-11ed-b30b-414015f6b883",
+      "content": "a",
+      "created_at": "2023-04-12 13:20:02.183003",
+      "updated_at": "2023-04-12 13:20:02.183003"
+    },
+    {
+      "id": "2b991100-ddee-11ed-87da-775e2b000704",
+      "content": "\\",
+      "created_at": "2023-04-09 13:37:22.598040",
+      "updated_at": "2023-04-09 13:37:22.598040"
+    }
+  ]
+}
