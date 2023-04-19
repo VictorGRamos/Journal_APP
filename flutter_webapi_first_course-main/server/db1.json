@@ -4,16 +4,10 @@
   },
   "journals": [
     {
-      "id": "45d9dab0-dedc-11ed-be50-91f391a67bad",
-      "content": "Domingo dia 16 - Edited",
-      "created_at": "2023-04-16 18:01:23.881668",
-      "updated_at": "2023-04-16 18:01:23.881668"
-    },
-    {
-      "id": "69300700-dedc-11ed-be50-91f391a67bad",
-      "content": "Quarta dia 12 - Editado",
-      "created_at": "2023-04-12 18:01:23.881668",
-      "updated_at": "2023-04-12 18:01:23.881668"
+      "id": "da57a480-dee4-11ed-9c8b-338a49ebf4c1",
+      "content": "domingo dia 9",
+      "created_at": "2023-04-09 18:50:49.198102",
+      "updated_at": "2023-04-09 18:50:49.198102"
     }
   ]
 }

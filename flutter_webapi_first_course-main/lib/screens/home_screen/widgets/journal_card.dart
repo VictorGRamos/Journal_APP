@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webapi_first_course/helpers/weekday.dart';
 import 'package:flutter_webapi_first_course/models/journal.dart';
+import 'package:flutter_webapi_first_course/screens/commom/confirmation_dialog.dart';
+import 'package:flutter_webapi_first_course/services/journal_service.dart';
 import 'package:uuid/uuid.dart';
 
 class JournalCard extends StatelessWidget {
@@ -81,6 +83,11 @@ class JournalCard extends StatelessWidget {
                   ),
                 ),
               ),
+              IconButton(
+                  onPressed: () {
+                    removeJournal(context);
+                  },
+                  icon: const Icon(Icons.delete))
             ],
           ),
         ),
@@ -115,7 +122,7 @@ class JournalCard extends StatelessWidget {
     if (journal != null) {
       innerJournal = journal;
       map['is_editing'] = true;
-    }else{
+    } else {
       map['is_editing'] = false;
     }
 
@@ -131,6 +138,25 @@ class JournalCard extends StatelessWidget {
             const SnackBar(content: Text('Registro feito com sucesso!')));
       }
       refreshFunction();
+    });
+  }
+
+  removeJournal(BuildContext context) {
+    showConfirmationDialog(context).then((value) {
+      if (value != null) {
+        if (value == true) {
+          JournalService service = JournalService();
+          if (journal != null) {
+            service.delete(journal!.id).then((value) {
+              if (value) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text("Registro removido!")));
+                refreshFunction();
+              }
+            });
+          }
+        }
+      }
     });
   }
 }
