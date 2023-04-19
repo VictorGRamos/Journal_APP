@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.grey,
         appBarTheme: const AppBarTheme(
             elevation: 0,
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.black26,
             titleTextStyle: TextStyle(
               color: Colors.white,
             ),
