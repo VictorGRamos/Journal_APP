@@ -1,4 +1,16 @@
 {
+  "users": [
+    {
+      "email": "victorramos2959@gmail.com",
+      "password": "$2a$10$ql2.el6lKNMpOiJFtbkgnech8zbWpHTL0fiMEUCOhFenV/tZb6Gy2",
+      "id": 1
+    },
+    {
+      "email": "victor.ramos@ferroeste.com.br",
+      "password": "$2a$10$ZIwoaAuQMjomD.kamkds/u.lWuYDbpPdWzbqnS8Wy3v0t07Y6Yfli",
+      "id": 2
+    }
+  ],
   "learnhttp": {
     "content": "Olá Mundo!"
   },
