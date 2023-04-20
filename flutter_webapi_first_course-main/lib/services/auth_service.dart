@@ -65,6 +65,13 @@ class AuthService {
     prefs.setString("email", email);
     prefs.setInt("id", id);
 
+  } 
+
+  deleteUserInfos() async{
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.remove("accessToken");
+    prefs.remove("id");
+    prefs.remove("email");
   }
 
 }
