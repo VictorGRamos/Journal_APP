@@ -14,20 +14,5 @@
   "learnhttp": {
     "content": "Olá Mundo!"
   },
-  "journals": [
-    {
-      "id": "da57a480-dee4-11ed-9c8b-338a49ebf4c1",
-      "content": "Dia 12",
-      "created_at": "2023-04-12 18:50:49.198102",
-      "updated_at": "2023-04-12 18:50:49.198102",
-      "userId": 2
-    },
-    {
-      "id": "da57a480-dee4-11ed-9c8b-338a49ebf4c1",
-      "content": "Dia 13",
-      "created_at": "2023-04-13 18:50:49.198102",
-      "updated_at": "2023-04-13 18:50:49.198102",
-      "userId": 2
-    }
-  ]
+  "journals": []
 }
