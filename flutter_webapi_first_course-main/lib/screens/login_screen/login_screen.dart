@@ -1,5 +1,9 @@
+import 'dart:async';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_webapi_first_course/screens/commom/confirmation_dialog.dart';
+import 'package:flutter_webapi_first_course/screens/commom/exception_dialog.dart';
 import 'package:flutter_webapi_first_course/services/auth_service.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -72,26 +76,39 @@ class LoginScreen extends StatelessWidget {
     String email = _emailController.text;
     String password = _passController.text;
 
-    try {
-      auth.login(email: email, password: password).then((resultLogin){
+    auth.login(email: email, password: password).then(
+      (resultLogin) {
         if (resultLogin == true) {
           Navigator.pushReplacementNamed(context, "home");
         }
-      });
-    } on UserNotFoundException {
+      },
+    ).catchError((error) {
+      showExceptionDialog(context, content: error.message);
+    }, test: (error) => error is HttpException).catchError((error) {
       showConfirmationDialog(context,
-        title: "Criação de usuário",
-        content: "Deseja criar um novo usuário?",
-        affirmativeOption: "Criar").then((value) {
+              title: "Criação de usuário",
+              content: "Deseja criar um novo usuário?",
+              affirmativeOption: "Criar")
+          .then(
+        (value) {
           if (value != null && value == true) {
-            auth.register(email: email, password: password).then((resultRegister){
-              if (resultRegister == true) {
-                Navigator.pushReplacementNamed(context, "home");
-              }
-            });
+            auth.register(email: email, password: password).then(
+              (resultRegister) {
+                if (resultRegister == true) {
+                  Navigator.pushReplacementNamed(context, "home");
+                }
+              },
+            );
           }
-        }
+        },
       );
-    }
+    }, test: (error) => error is UserNotFoundException).catchError(
+      (error) {
+        showExceptionDialog(context,
+            content:
+                "O servidor demorou para responder, tente novamente mais tarde");
+      },
+      test: (error) => error is TimeoutException,
+    );
   }
 }

@@ -1,9 +1,14 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_webapi_first_course/helpers/weekday.dart';
 import 'package:flutter_webapi_first_course/models/journal.dart';
 import 'package:flutter_webapi_first_course/screens/commom/confirmation_dialog.dart';
 import 'package:flutter_webapi_first_course/services/journal_service.dart';
 import 'package:uuid/uuid.dart';
+
+import '../../../helpers/logout.dart';
+import '../../commom/exception_dialog.dart';
 
 class JournalCard extends StatelessWidget {
   final Journal? journal;
@@ -158,7 +163,17 @@ class JournalCard extends StatelessWidget {
                   const SnackBar(content: Text("Registro removido!")));
                 refreshFunction();
               }
-            });
+            }).catchError(
+            (error) {
+              logout(context);
+            },
+            test: (error) => error is TokenNotValidException,
+          ).catchError(
+            (error) {
+              showExceptionDialog(context, content: error.message);
+            },
+            test: (error) => error is HttpException,
+          );
           }
         }
       }

@@ -9,10 +9,37 @@
       "email": "victor.ramos@ferroeste.com.br",
       "password": "$2a$10$ZIwoaAuQMjomD.kamkds/u.lWuYDbpPdWzbqnS8Wy3v0t07Y6Yfli",
       "id": 2
+    },
+    {
+      "email": "teste@gmail.com",
+      "password": "$2a$10$GZNNKOEEmhz1dVOLhdaTTeyT86jsgcDsIyRdLyKpo4TFOzuViHR/q",
+      "id": 3
     }
   ],
   "learnhttp": {
     "content": "Olá Mundo!"
   },
-  "journals": []
+  "journals": [
+    {
+      "id": "27c4a280-e2a6-11ed-b361-a192009fbcda",
+      "content": "Teste UPDATED AT 2",
+      "created_at": "2023-04-20 13:43:23.251508",
+      "updated_at": "2023-04-24 17:34:25.688722",
+      "userId": 1
+    },
+    {
+      "id": "33833a00-e2a6-11ed-b361-a192009fbcda",
+      "content": "Domingo dia 16 Usuario 1",
+      "created_at": "2023-04-16 13:43:23.251508",
+      "updated_at": "2023-04-16 13:43:23.251508",
+      "userId": 1
+    },
+    {
+      "id": "56fc7eb0-e2a6-11ed-b361-a192009fbcda",
+      "content": "Domingo dia 23 Usuario 2",
+      "created_at": "2023-04-23 13:45:30.666313",
+      "updated_at": "2023-04-23 13:45:30.666313",
+      "userId": 2
+    }
+  ]
 }
